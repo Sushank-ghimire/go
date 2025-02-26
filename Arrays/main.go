@@ -23,16 +23,21 @@ func GetUserInputNumbers() {
 
 	numArray := make([]int, size)
 
-	for i := 0; i < size; i++ {
-		fmt.Scan(&numArray[i])
+	for val := range numArray {
+		fmt.Scan(&numArray[val])
 	}
 
 	fmt.Printf("The numbers are : ")
-	for i := 0; i < size; i++ {
-		fmt.Printf("%d", numArray[i])
+	for val := range numArray {
+		fmt.Printf("%d", numArray[val])
 	}
 }
 
 func main() {
-	GetUserInputNumbers()
+	// basics()
+	// GetUserInputNumbers()
+	cars := []string{"Toyata", "BMW", "RRR"}
+	for val := range cars {
+		fmt.Println("Index : ", val, "Value : ", cars[val])
+	}
 }
