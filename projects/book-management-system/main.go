@@ -1,7 +1,6 @@
 package main
 
 import (
-	"book-management-system/pkg/config"
 	"book-management-system/pkg/routes"
 	"fmt"
 	"github.com/gorilla/mux"
@@ -15,7 +14,6 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	config.ConnectDatabase()
 	r := mux.NewRouter()
 	r.HandleFunc("/", homeHandler).Methods("GET")
 	routes.RegisterBookRoutes(r)
